@@ -9,8 +9,28 @@ ddev launch
 
 ```
 ddev composer install
-# TODO: automatic .env creation?
+ddev exec "cat .env.example.dev | sed  -E 's/CRAFT_DB_(SERVER|DATABASE|USER|PASSWORD)=(.*)/CRAFT_DB_\1=db/g' > .env"
+# The following only works if PRIMARY_SITE_URL is in .env
+ddev exec 'sed -i "s#PRIMARY_SITE_URL=.*#PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}#g" .env'
+
+ddev exec php craft setup/app-id 
+ddev exec php craft setup/security-key
+ddev exec php craft install
+# TODO: more steps needed? migrate?
+ddev launch
+
 ddev npm install
+ddev npm run build
+ddev npm run dev
+```
+
+## Reset 
+
+```
+# reset files
+git clean -fdx -e .ddev/
+# delete database and ddev project (without snapshot)
+ddev delete -O
 ```
 
 ## TODOs
@@ -43,6 +63,8 @@ ddev composer create -y craftcms/craft
 # Answer yes to the prompt on whether to install Craft now, and answer the remaining prompts as you like. The only one that matters is Site URL, which you should answer with https://ddev-craftcms-example.ddev.site.
 
 ddev launch
+
+# Added PRIMARY_SITE_URL=https://ddev-craftcms-example.ddev.site to .env and .env.example.dev
 
 # Install vite
 ddev composer require nystudio107/craft-vite
