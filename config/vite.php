@@ -5,7 +5,8 @@
 use craft\helpers\App;
 
 return [
-    'useDevServer' => (bool) App::env('USE_VITE_DEV_SERVER'),
+    // activate dev server on local env, but not production
+    'useDevServer' => (bool) App::env('CRAFT_ENVIRONMENT') === 'dev',
     'manifestPath' => Craft::getAlias('@webroot') . '/dist/manifest.json',
     'devServerPublic' => Craft::getAlias('@web') . ':3000',
     'serverPublic' => Craft::getAlias('@web') . '/dist/',
