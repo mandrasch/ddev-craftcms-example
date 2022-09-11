@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="{{ craft.app.language }}">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
@@ -150,6 +150,9 @@
         }
 
     </style>
+
+
+{{ craft.vite.script("src/js/app.ts") }}
 </head>
 <body class="ltr">
 <div id="container">
@@ -187,5 +190,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

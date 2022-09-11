@@ -1,0 +1,32 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "Let's get the party started.",
+  "main": "vite.config.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev vite --host",
+    "build": "NODE_ENV=production vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandrasch/ddev-craftcms-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mandrasch/ddev-craftcms-example/issues"
+  },
+  "homepage": "https://github.com/mandrasch/ddev-craftcms-example#readme",
+  "dependencies": {
+    "@vitejs/plugin-legacy": "^2.1.0",
+    "sass": "^1.54.9",
+    "vite": "^3.1.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-live-reload": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-twig-melody": "^0.4.6"
+  }
+}

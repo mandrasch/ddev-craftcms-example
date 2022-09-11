@@ -1,5 +1,24 @@
-Let's get the party started.
+Let's get the party started. Based on https://github.com/thomasbendl/craft4-ddev-vite-blueprint.
 
+```
+ddev npm run dev
+ddev launch
+```
+
+## Local first time setup
+
+```
+ddev composer install
+# TODO: automatic .env creation?
+ddev npm install
+```
+
+## TODOs
+
+- [ ] Automatic .env creation with current primary url (https://ddev.readthedocs.io/en/latest/users/quickstart/#laravel)
+- [ ] Full pipeline build CI/CD + deployer (https://www.mitrais.com/news-updates/how-to-create-ci-cd-with-github-action-and-laravel/)
+    - (Improve https://dev.to/mandrasch/deploy-craft-cms-with-ddev-deployer-and-ploi-on-hetzner-cloud-part-1-27l2)
+- [ ] Add bootstrap5 or tailwind?
 
 ## How was this created?
 
@@ -23,4 +42,26 @@ ddev composer create -y craftcms/craft
 
 ddev launch
 
+# Install vite
+ddev composer require nystudio107/craft-vite
+ddev php craft plugin/install vite
+
+ddev npm init -y
+ddev npm i vite
+ddev npm i sass vite-plugin-live-reload @vitejs/plugin-legacy vite-plugin-compression
+
+# Add scripts to package.json:
+    "dev": "NODE_ENV=dev vite",
+    "build":"NODE_ENV=production vite",
+
+# Add .ddev/docker.compose.vite.yaml (needs 'ddev restart')
+
+# Add 'config/vite.php' and 'vite.config.js' 
+# (Copied from https://github.com/thomasbendl/craft4-ddev-vite-blueprint)
+
+# Bonus: For prettier auto formatting in vs code:
+npm i --save-dev prettier-plugin-twig-melody
 ```
+
+
+https://craftquest.io/courses/ddev-and-craft-cms-quick-start-guide/43674

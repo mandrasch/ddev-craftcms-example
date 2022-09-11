@@ -4,5 +4,5 @@ hasUrls: true
 language: en-US
 name: 'My example site'
 primary: true
-siteGroup: 018749f1-db25-4588-8bac-6199e443af2f
+siteGroup: 018749f1-db25-4588-8bac-6199e443af2f # My example site
 sortOrder: 1
