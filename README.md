@@ -19,6 +19,8 @@ ddev npm install
 - [ ] Full pipeline build CI/CD + deployer (https://www.mitrais.com/news-updates/how-to-create-ci-cd-with-github-action-and-laravel/)
     - (Improve https://dev.to/mandrasch/deploy-craft-cms-with-ddev-deployer-and-ploi-on-hetzner-cloud-part-1-27l2)
 - [ ] Add bootstrap5 or tailwind?
+- [ ] Use `ddev pull` to get media files and db from production/staging server
+- [ ] Add Gitpod support (https://my-ddev-lab.mandrasch.eu/ddev-meets-gitpod.html)
 
 ## How was this created?
 
