@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: assets
-          path: public
+          path: web/dist
           retention-days: 3
   deploy-production:
     name: Deploy Project to Production Server
@@ -33,7 +33,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: assets
-          path: public
+          path: web/dist
       - name: Setup PHP
         uses: shivammathur/setup-php@master
         with:

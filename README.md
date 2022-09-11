@@ -1,4 +1,12 @@
-Let's get the party started. Based on https://github.com/thomasbendl/craft4-ddev-vite-blueprint.
+Let's get the party started! 
+
+CraftCMS + DDEV + vite + Deployer
+
+Based on https://github.com/thomasbendl/craft4-ddev-vite-blueprint. 
+
+Work in progress.
+
+## Local development
 
 ```
 ddev npm run dev
