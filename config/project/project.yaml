@@ -1,0 +1,22 @@
+dateModified: 1662912550
+email:
+  fromEmail: matthias.andrasch@mailbox.org
+  fromName: 'My example site'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    5ff82d17-b3a4-40ee-96a7-8494e769befd: Common
+    49ad2a43-9494-434e-b669-282d4fc86ac0: 'My example site'
+    018749f1-db25-4588-8bac-6199e443af2f: 'My example site'
+system:
+  edition: solo
+  live: true
+  name: 'My example site'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
