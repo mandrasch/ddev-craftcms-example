@@ -1,3 +1,13 @@
+📢 Update 28.12.2022 📢 
+
+There is a now an official craftcms project type since DDEV v1.21.2, please refer to it:
+
+- https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms
+
+The repository might use outdated techniques. Cheers!
+
+<hr>
+
 Let's get the party started! 
 
 CraftCMS + DDEV + vite + Deployer
