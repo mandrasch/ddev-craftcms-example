@@ -4,7 +4,7 @@ There is a now an official craftcms project type since DDEV v1.21.2, please refe
 
 - https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms
 
-The repository might use outdated techniques. Cheers!
+This repository might use outdated techniques. Cheers!
 
 <hr>
 
